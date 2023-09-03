@@ -1,4 +1,4 @@
 #!/bin/bash
 
 pip install whisper
-sudo apt update && sudo apt install ffmpeg
+sudo apt update && sudo apt install -y ffmpeg
