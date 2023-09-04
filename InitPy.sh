@@ -1,4 +1,4 @@
 #!/bin/bash
 
-pip install whisper
+pip install -U openai-whisper
 sudo apt update && sudo apt install -y ffmpeg
