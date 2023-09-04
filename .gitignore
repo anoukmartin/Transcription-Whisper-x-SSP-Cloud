@@ -19,9 +19,9 @@
 *.odt
 
 # Images 
-*.PNG
-*.png
-*.svg
+# *.PNG
+# *.png
+# *.svg
 
 # User-specific files
 .Ruserdata
