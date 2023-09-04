@@ -56,4 +56,4 @@ Un exemple avec l'enregistrement audio de la chanson de [Meryl, *AHLALA*](https:
 
 ![](images/Capture14.PNG)
 
-Puis exécuter cette ligne de code grâce au bouton ![](images/Capture15.PNG)
+Puis exécuter cette ligne de code grâce au bouton ![](images/Capture15.PNG). Le chargement du modèle commence. Une fois effectué, la transcription de l'audio démarre.
