@@ -43,7 +43,7 @@ Une fois le service lancé, l'interface Jupyter s'ouvre :
 
 ### 1. Charger votre fichier audio
 
-En utilisant le bouton ![](images/Capture11.PNG){width="36"}, charger le fichier audio à retranscrire. Celui doit être au format .mp3 ou .wav.
+En utilisant le bouton ![](images/Capture11.PNG){width="36"}, charger le(s) fichier(s) audio à retranscrire. Celui doit être au format .mp3 ou .wav. Si votre fichier est volumineux ou que vous souhaiter en charger plusieurs, il est préférable de disposer d'une bonne connexion à internet.
 
 ### 2. Ouvrez un Notebook Python
 
