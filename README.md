@@ -56,7 +56,7 @@ Dans la partie droite de l'écran, cliquer sur le bouton ![](images/Capture12.PN
 Dans le Notebook écrire la ligne de code suivante, en remplaçant "nom de l'audio".
 
 ``` python
-whisper "nom de l'audio" --model large-v2 --language fr
+!whisper "nom de l'audio" --model large-v2 --language fr
 ```
 
 Un exemple avec l'enregistrement audio de la chanson de [Meryl, *AHLALA*](https://www.youtube.com/watch?v=XfIefINb84U&ab_channel=FIYAHRECORDS).
