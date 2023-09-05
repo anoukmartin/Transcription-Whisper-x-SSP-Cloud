@@ -53,10 +53,10 @@ Dans la partie droite de l'écran, cliquer sur le bouton ![](images/Capture12.PN
 
 ### 3. Demander à Whisper de retranscrire l'audio
 
-Dans le Notebook écrire la ligne de code suivante, en remplaçant "nom de l'audio".
+Dans le Notebook écrire la ligne de code suivante, en remplaçant "mon_enregistement_audio" par son nom.
 
 ``` python
-!whisper "nom de l'audio" --model large-v2 --language fr
+!whisper "mon_enregistement_audio" --model large-v2 --language French
 ```
 
 Un exemple avec l'enregistrement audio de la chanson de [Meryl, *AHLALA*](https://www.youtube.com/watch?v=XfIefINb84U&ab_channel=FIYAHRECORDS).
