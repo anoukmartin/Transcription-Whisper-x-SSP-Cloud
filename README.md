@@ -8,7 +8,7 @@ L'utilisation de Whisper en local pour la transcription de fichiers audio aussi 
 
 ## Une grosse puissance de calcul en accès (presque) libre
 
-On propose d'utiliser ici le datalab, service de calcul en ligne du [SSP Cloud](https://github.com/InseeFrLab/onyxia-web/blob/main/README.md), développé par l'INSEE et la Direction Interministérielle du Numérique (DINUM) qui permet l'émulation en ligne d'applications comme Rstudio, Jupyter et Vscode et met à disposition des ressources (CPU, GPU et RAM) permettant ainsi d'accélérer grandement la vitesse de calcul[^readme-1]. En d'autre termes, l'utilisation du datalab du SSP Cloud permet de retranscrire des entretiens rapidement et précisément tout en continuant d'utiliser son ordinateur normalement pendant que cette tache s'effectue (puisque les ressources locales ne sont pas utilisées). Ainsi, avec le modèle de transcription le plus lourd et précis, la durée de transcription est proche de celle de l'enregistrement (par exemple 2h d'entretien seront transcrites en 2h par Whisper), on a donc des performances similaires à celles observées avec Google Collab.
+Onyxia propose un datalab, service de calcul en ligne du [SSP Cloud](https://github.com/InseeFrLab/onyxia-web/blob/main/README.md), développé par l'INSEE et la Direction Interministérielle du Numérique (DINUM) qui permet l'émulation en ligne d'applications comme Rstudio, Jupyter et Vscode et met à disposition des ressources (CPU, GPU et RAM) permettant ainsi d'accélérer grandement la vitesse de calcul[^readme-1]. En d'autre termes, l'utilisation du datalab du SSP Cloud permet de retranscrire des entretiens rapidement et précisément tout en continuant d'utiliser son ordinateur normalement pendant que cette tache s'effectue (puisque les ressources locales ne sont pas utilisées). Ainsi, avec le modèle de transcription le plus lourd et précis, la durée de transcription est proche de celle de l'enregistrement (par exemple 2h d'entretien seront transcrites en 2h par Whisper), on a donc des performances similaires à celles observées avec Google Collab.
 
 [^readme-1]: L'émulation sur le datalab permet ainsi une utilisation de Rstudio qui ne nécessite pas d'installation de logiciels (ni R ni Rstudio), reste à jour, dont la puissance de calcul en général meilleure que celle des ordinateurs personnels. Elle permet aussi la pré-configuration et le partage de ces services, ce qui peut être particulièrement utile dans un cadre de travail collectif ou pour l'enseignement des méthodes quantitatives. A ce titre, l'utilisation des services du SSP Cloud pourrait intéresser bon nombre d'étudiant.e.s, d'enseigant.e.s et de chercheur.euse.s. Il est cependant conseillé de maîtriser les bases de l'utilisation de [Git](https://git-scm.com/).
 
@@ -18,7 +18,7 @@ L'utilisation du datalab du SSP Cloud est gratuite, cependant elle nécessite la
 
 ## Une meilleure (mais pas parfaite) protection des données
 
-L'utilisation du datalab n'est pas non plus exempt de limites en matière de protection des données. En particulier le système de stockage du SSP Cloud ne peut pas garantir la confidentialité des données stockées sur celui-ci. Cependant avec la méthode proposée ici, l'enregistrement audio et sa transcription sous la forme de texte ne sont pas chargés dans le système de stockage du SSP Cloud mais seulement dans la mémoire temporaire d'un service dont la suppression est possible après chaque utilisation et est automatique après 24h, limitant de ce fait les risques de divulgation. **En cas d'informations très sensibles contenues dans vos enregistrements, il reste préférable d'utiliser une autre solution (comme l'utilisation de WhisperOpenAI en local sur votre ordinateur).**
+Si Google Colab pose d'évidents problèmes de RGPD, l'utilisation du datalab n'est pas non plus exempt de limites en matière de protection des données. En particulier le système de stockage du SSP Cloud ne peut pas garantir la confidentialité des données stockées sur celui-ci. Il est donc déconseillé de charger des enregistrements audio d'entretiens sociologiques sur celui-ci. Cependant avec la méthode proposée ici, l'enregistrement audio et sa transcription sous la forme de texte ne sont pas chargés dans le système de stockage du SSP Cloud mais seulement dans la mémoire temporaire d'un service dont la suppression est possible après chaque utilisation et est automatique après 24h, limitant de ce fait les risques de divulgation. **En cas d'informations très sensibles contenues dans vos enregistrements, il reste préférable d'utiliser une autre solution (comme la retranscription à la main).**
 
 # Tutoriel
 
@@ -28,11 +28,11 @@ Si vous n'en avez pas, vous devez [créer un compte](https://auth.lab.sspcloud.f
 
 ## Etape 1 : Lancer Python préconfiguré pour Whisper
 
-Il est possible de lancer Python directement via l'onglet "Catalogue de services" en choisissant jupyter-python-gpu puis en réalisant "a la main" la configuration du service et enfin en installant Whisper et ses dépendances.
+Dans l'environnement de travail du SSP Cloud, il est possible de lancer Python directement via l'onglet "Catalogue de services" en choisissant jupyter-python-gpu puis en réalisant "à la main" la configuration du service et enfin en installant Whisper et ses dépendances.
 
-Vous pouvez plus simplement lancer python en suivant ce lien : [lancer python préconfiguré pour Whisper](https://datalab.sspcloud.fr/launcher/ide/jupyter-python-gpu?autoLaunch=true&onyxia.friendlyName=«Transcription%20Whisper»&resources.limits.cpu=«40000m»&resources.limits.nvidia.com/gpu=«4»&resources.limits.memory=«198Gi»&init.personalInit=«https%3A%2F%2Fraw.githubusercontent.com%2Fanoukmartin%2FTranscription-Whisper-x-SSP-Cloud%2Fmain%2FInitPy.sh»). Dans ce cas, un nouveau service nommé ![](images/Capture3.PNG){width="158"} apparaît dans l'onglet ![](images/Capture2.PNG){width="120" height="30"} de votre compte datalab SSP Cloud. Ce service est pré-configuré pour que l'utilisation de Whisper y soit facile[^readme-3].
+Vous pouvez plus simplement lancer python en suivant ce lien : [lancer python préconfiguré pour Whisper](https://datalab.sspcloud.fr/launcher/ide/jupyter-python-gpu?autoLaunch=true&onyxia.friendlyName=«Transcription%20Whisper»&resources.limits.cpu=«40000m»&resources.limits.nvidia.com/gpu=«4»&resources.limits.memory=«198Gi»&init.personalInit=«https%3A%2F%2Fraw.githubusercontent.com%2Fanoukmartin%2FTranscription-Whisper-x-SSP-Cloud%2Fmain%2FInitPy.sh»). Dans ce cas, un nouveau service nommé ![](images/Capture3.PNG){width="158"} apparaît dans l'onglet ![](images/Capture2.PNG){width="120" height="30"} de votre compte SSP Cloud. Ce service est pré-configuré pour que l'utilisation de Whisper y soit facile[^readme-3].
 
-[^readme-3]: Ce service est préconfiguré de sorte à obtenir l'assistance d'un GPU et a disposer du maximum de ressources possible en CPU et mémoire vive en cas de besoin. L'installation de whisper et de ffmpeg se fait automatiquement lors du lancement du service. Les informations précises sur ces réglages sont disponibles en cliquant sur ![](images/Capture4.PNG)
+[^readme-3]: Ce service est préconfiguré de sorte à obtenir l'assistance d'un GPU et à disposer du maximum de ressources possible en CPU et mémoire vive en cas de besoin. L'installation de whisper et de ffmpeg se fait automatiquement lors du lancement du service. Les informations précises sur ces réglages sont disponibles en cliquant sur ![](images/Capture4.PNG) une fois que le service est prêt.
 
 Une fois que ce service est prêt (cela peut prendre un peu de temps car le chargement de Whisper est long) pour l'ouvrir, cliquer sur le bouton ![](images/Capture5.PNG){width="67"}. Une boite de dialogue s'ouvre. Cliquer sur ![](images/Capture6.PNG){width="231"} puis sur ![](images/Capture7.PNG){width="242"}. Une page s'ouvre. Coller le mot de passe dans le champ destiné pour se connecter ![](images/Capture8.PNG){width="234"} .
 
@@ -60,7 +60,7 @@ Dans le Notebook écrire la ligne de code suivante, en remplaçant "mon_enregist
 !whisper "mon_enregistement_audio" --model large-v2 --language French
 ```
 
-Un exemple avec l'enregistrement audio de la chanson de [Meryl, *AHLALA*](https://www.youtube.com/watch?v=XfIefINb84U&ab_channel=FIYAHRECORDS).
+Un exemple avec l'enregistrement audio de la chanson de [Meryl, "*AH LALA*"](https://www.youtube.com/watch?v=XfIefINb84U&ab_channel=FIYAHRECORDS)*:*
 
 ![](images/Capture14%20(2).PNG)
 
@@ -68,6 +68,6 @@ Puis exécuter cette ligne de code grâce au bouton ![](images/Capture15.PNG). L
 
 ![](images/Capture17.PNG)
 
-## 4. Télécharger la transcription du fichier audio
+### 4. Télécharger la transcription du fichier audio et supprimer le service
 
-Pour télécharger le fichier texte : clic droit sur celui-ci \> download
+Cet enrvironement de travail sera automatiquement supprimé après 24h, il est conseillé de télécharger rapidement la transcription de l'audio. Pour télécharger le fichier texte : clic droit sur celui-ci \> download. Vous pouvez alors répéter ces opérations pour transcrire d'autres fichiers audio. Une fois les retranscriptions terminées, il reste conseillé de supprimer le service.
