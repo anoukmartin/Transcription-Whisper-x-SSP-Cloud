@@ -62,7 +62,7 @@ Dans le Notebook écrire la ligne de code suivante, en remplaçant "mon_enregist
 
 Un exemple avec l'enregistrement audio de la chanson de [Meryl, *AHLALA*](https://www.youtube.com/watch?v=XfIefINb84U&ab_channel=FIYAHRECORDS).
 
-![](images/Capture14 (2).PNG)
+![](images/Capture14%20(2).PNG)
 
 Puis exécuter cette ligne de code grâce au bouton ![](images/Capture15.PNG). Le chargement du modèle commence. Une fois effectué, la transcription de l'audio démarre. Lorsque celle-ci est finie, plusieurs fichiers apparaissent dans la partie gauche de l'écran. Ils portent tous le nom de votre audio et sont de formats différents. Le fichier de format texte (.txt) contient la transcription de l'enregistrement.
 
