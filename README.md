@@ -18,7 +18,7 @@ L'utilisation du datalab du SSP Cloud est gratuite, cependant elle nécessite la
 
 ## Une meilleure (mais pas parfaite) protection des données
 
-Si Google Colab pose d'évidents problèmes avec le RGPD, l'utilisation du datalab n'est pas non plus exempt de limites en matière de protection des données. En particulier le système de stockage du SSP Cloud ne peut pas garantir la confidentialité des données stockées sur celui-ci. Cependant avec la méthode proposée ici, l'enregistrement audio et sa transcription sous la forme de texte ne sont pas chargés dans le système de stockage du SSP Cloud mais seulement dans la mémoire temporaire d'un service dont la suppression est possible après chaque utilisation et est automatique après 24h, limitant de ce fait les risques de divulgation. **En cas d'informations très sensibles contenues dans vos enregistrements, il reste préférable d'utiliser une autre solution (comme la retranscription à la main).**
+Si Google Colab pose d'évidents problèmes de RGPD, l'utilisation du datalab n'est pas non plus exempt de limites en matière de protection des données. En particulier le système de stockage du SSP Cloud ne peut pas garantir la confidentialité des données stockées sur celui-ci. Il est donc déconseillé de charger des enregistrements audio d'entretiens sociologiques sur celui-ci. Cependant avec la méthode proposée ici, l'enregistrement audio et sa transcription sous la forme de texte ne sont pas chargés dans le système de stockage du SSP Cloud mais seulement dans la mémoire temporaire d'un service dont la suppression est possible après chaque utilisation et est automatique après 24h, limitant de ce fait les risques de divulgation. **En cas d'informations très sensibles contenues dans vos enregistrements, il reste préférable d'utiliser une autre solution (comme la retranscription à la main).**
 
 # Tutoriel
 
@@ -60,7 +60,7 @@ Dans le Notebook écrire la ligne de code suivante, en remplaçant "mon_enregist
 !whisper "mon_enregistement_audio" --model large-v2 --language French
 ```
 
-Un exemple avec l'enregistrement audio de la chanson de [Meryl, *AHLALA*](https://www.youtube.com/watch?v=XfIefINb84U&ab_channel=FIYAHRECORDS).
+Un exemple avec l'enregistrement audio de la chanson de [Meryl, "*AH LALA*"](https://www.youtube.com/watch?v=XfIefINb84U&ab_channel=FIYAHRECORDS)*:*
 
 ![](images/Capture14%20(2).PNG)
 
@@ -68,6 +68,6 @@ Puis exécuter cette ligne de code grâce au bouton ![](images/Capture15.PNG). L
 
 ![](images/Capture17.PNG)
 
-## 4. Télécharger la transcription du fichier audio
+### 4. Télécharger la transcription du fichier audio et supprimer le service
 
-Pour télécharger le fichier texte : clic droit sur celui-ci \> download
+Cet enrvironement de travail sera automatiquement supprimé après 24h, il est conseillé de télécharger rapidement la transcription de l'audio. Pour télécharger le fichier texte : clic droit sur celui-ci \> download. Vous pouvez alors répéter ces opérations pour transcrire d'autres fichiers audio. Une fois les retranscriptions terminées, il reste conseillé de supprimer le service.
