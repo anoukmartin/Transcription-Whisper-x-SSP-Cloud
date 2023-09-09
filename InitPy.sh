@@ -8,14 +8,14 @@ exec 1>log.out 2>&1
 # Pareil pour les variables d'environnement
 env | sort > env_init.out
 
-# Installation de WhisperOpenAI
-pip install -U openai-whisper
-
 # Installation de ffmpeg
 sudo apt update && sudo apt install -y ffmpeg
 
 # Copie du notebook de transcription
 wget https://github.com/anoukmartin/Transcription-Whisper-x-SSP-Cloud/blob/main/Transcription_Whisper.ipynb
+
+# Installation de WhisperOpenAI
+pip install -U openai-whisper
 
 # Restitution des droit à l'utilisateur du service
 chown -R ${USERNAME}:${GROUPNAME} ${HOME}
