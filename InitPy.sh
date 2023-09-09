@@ -8,7 +8,3 @@ wget https://raw.githubusercontent.com/anoukmartin/Transcription-Whisper-x-SSP-C
 
 # Installation de WhisperOpenAI
 pip install -U openai-whisper
-
-# Restitution des droit à l'utilisateur du service
-chown -R ${USERNAME}:${GROUPNAME} ${HOME}
-ls -al /home/onyxia # avant work a un groupe 1000
