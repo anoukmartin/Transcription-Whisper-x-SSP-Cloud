@@ -24,7 +24,7 @@ Si Google Colab pose d'évidents problèmes de RGPD, l'utilisation du datalab n'
 
 Pour autant, avec la méthode de transcription proposée ici, l'enregistrement audio et sa retranscription sous la forme de texte ne sont pas chargés dans le système de stockage du SSP Cloud mais seulement de manière confidentielle dans la mémoire temporaire d'un service dont la suppression est possible après chaque utilisation et est automatique après 24h, ils y sont donc en sécurité.
 
-Cependant, **en cas d'informations très sensibles contenues dans vos enregistrements, et au vu des problèmes de confidentialité que posent de toute façon l'utilisation d'OpenAI, aucune solution ne pourra remplacer une retranscription à la main.**
+⚠️ **En cas d'informations très sensibles contenues dans vos enregistrements, et au vu des problèmes de confidentialité que posent de toute façon l'utilisation d'OpenAI, aucune solution ne pourra remplacer une retranscription à la main.**
 
 # Tutoriel
 
@@ -32,7 +32,7 @@ Cependant, **en cas d'informations très sensibles contenues dans vos enregistre
 
 Si vous n'en avez pas, vous devez [créer un compte](https://auth.lab.sspcloud.fr/auth/realms/sspcloud/login-actions/registration?client_id=onyxia&tab_id=VHXwOvcjkjQ).
 
-## Etape 1 : Lancer Python pré-configuré pour Whisper
+## Etape 1 : Lancer un service Python pré-configuré pour Whisper
 
 Dans l'environnement de travail du SSP Cloud, il est possible de lancer Python directement via l'onglet "Catalogue de services" en choisissant jupyter-python-gpu puis en réalisant "à la main" la configuration du service et enfin en installant Whisper et ses dépendances.
 
