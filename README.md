@@ -54,7 +54,8 @@ Dans la partie gauche de l'écran, ouvrir le fichier intitulé `Transcription_wh
 
 Suivre ainsi les instructions indiquées sur le document.
 
-::: {.exemple style="background: #EFEFEF; padding: 30px; border-radius: 50px;"}
+------------------------------------------------------------------------
+
 ### Un exemple avec ["AH LALA" de Meryl](https://www.youtube.com/watch?v=XfIefINb84U&ab_channel=FIYAHRECORDS).
 
 #### 1. Charger le(s) fichier(s) audio à retranscrire
@@ -79,7 +80,7 @@ Cliquer sur le petit bouton ![](images/Capture15.PNG). Le chargement du modèle 
 
 ![](images/Capture17.PNG)
 
-#### 3. Télécharger la transcription de votre fichier audio 
+#### 3. Télécharger la transcription de votre fichier audio
 
 Lorsque celle-ci est finie, plusieurs fichiers apparaissent dans la partie gauche de l'écran. Ils portent tous le nom de votre audio et sont de formats différents. Le fichier de format texte (.txt) contient la transcription de l'enregistrement. Pour le télécharger : clic droit sur celui-ci \> download
 
@@ -88,4 +89,3 @@ Lorsque celle-ci est finie, plusieurs fichiers apparaissent dans la partie gauch
 #### 4. Recommencer le point 2. et 3. si vous avez plusieurs fichiers audio à retranscrire
 
 Vous pouvez alors répéter ces opérations pour transcrire d'autres fichiers audio. Une fois les retranscriptions terminées, il reste conseillé de supprimer le service.
-:::
