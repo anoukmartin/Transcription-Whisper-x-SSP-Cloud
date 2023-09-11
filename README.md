@@ -56,39 +56,39 @@ Suivre ainsi les instructions indiquées sur le document.
 
 ------------------------------------------------------------------------
 
-### Un exemple avec ["AH LALA" de Meryl](https://www.youtube.com/watch?v=XfIefINb84U&ab_channel=FIYAHRECORDS).
+### ⟹ *Un exemple avec ["AH LALA" de Meryl](https://www.youtube.com/watch?v=XfIefINb84U&ab_channel=FIYAHRECORDS).*
 
-#### 1. Charger le(s) fichier(s) audio à retranscrire
+#### *1. Charger le(s) fichier(s) audio à retranscrire*
 
-Charger le ou les fichier(s) audio à retranscrire en utilisant le bouton ![](images/Capture11.PNG){width="36"}. Le(s) fichier(s) doi(ven)t être au format .mp3 ou .wav. Si votre fichier est volumineux ou que vous souhaiter en charger plusieurs, il est préférable de disposer d'une bonne connexion à internet. Il(s) devrai(en)t apparaître dans la liste de la partie gauche de l'écran.
+*Charger le ou les fichier(s) audio à retranscrire en utilisant le bouton ![](images/Capture11.PNG){width="36"}. Le(s) fichier(s) doi(ven)t être au format .mp3 ou .wav. Si votre fichier est volumineux ou que vous souhaiter en charger plusieurs, il est préférable de disposer d'une bonne connexion à internet. Il(s) devrai(en)t apparaître dans la liste de la partie gauche de l'écran.*
 
 ![](images/Capture13.PNG)
 
-### 2. Demander à Whisper de retranscrire un audio
+#### *2. Demander à Whisper de retranscrire un audio*
 
-Exécuter la ligne de code ci-dessous en changeant au besoin ces paramètres (pour connaître les autres options disponibles, consulter le [dépôt Github d'OpenAI](https://github.com/openai/whisper/tree/main)) :
+*Exécuter la ligne de code ci-dessous en changeant au besoin ces paramètres (pour connaître les autres options disponibles, consulter le [dépôt Github d'OpenAI](https://github.com/openai/whisper/tree/main)) :*
 
--   `"mon_enregistrement_audio.mp3"` indique le nom du fichier audio. A adapter en fonction du nom de votre fichier.
--   `--model large-v2` signifie que l'on souhaite utiliser le modèle le plus lourd et précis.
--   `--language French` signifie que l'entretien est en français.
+-   *`"mon_enregistrement_audio.mp3"` indique le nom du fichier audio. A adapter en fonction du nom de votre fichier.*
+-   *`--model large-v2` signifie que l'on souhaite utiliser le modèle le plus lourd et précis.*
+-   *`--language French` signifie que l'entretien est en français.*
 
 ``` python
 !whisper "mon_enregistrement_audio.mp3" --model large-v2 --language French
 ```
 
-Cliquer sur le petit bouton ![](images/Capture15.PNG). Le chargement du modèle va alors commencer, cela peut prendre un certain temps. Une fois terminé la transcription va démarrer :
+*Cliquer sur le petit bouton ![](images/Capture15.PNG). Le chargement du modèle va alors commencer, cela peut prendre un certain temps. Une fois terminé la transcription va démarrer :*
 
 ![](images/Capture17.PNG)
 
-#### 3. Télécharger la transcription de votre fichier audio
+#### *3. Télécharger la transcription de votre fichier audio*
 
-Lorsque celle-ci est finie, plusieurs fichiers apparaissent dans la partie gauche de l'écran. Ils portent tous le nom de votre audio et sont de formats différents. Le fichier de format texte (.txt) contient la transcription de l'enregistrement. Pour le télécharger : clic droit sur celui-ci \> download
+*Lorsque celle-ci est finie, plusieurs fichiers apparaissent dans la partie gauche de l'écran. Ils portent tous le nom de votre audio et sont de formats différents. Le fichier de format texte (.txt) contient la transcription de l'enregistrement. Pour le télécharger : clic droit sur celui-ci \> download*
 
 ![](images/Capture18.png)
 
-#### 4. Recommencer le point 2. et 3. si vous avez plusieurs fichiers audio à retranscrire
+#### *4. Recommencer le point 2. et 3. si vous avez plusieurs fichiers audio à retranscrire*
 
-Vous pouvez alors répéter ces opérations pour transcrire d'autres fichiers audio.
+*Vous pouvez alors répéter ces opérations pour transcrire d'autres fichiers audio.*
 
 ------------------------------------------------------------------------
 
