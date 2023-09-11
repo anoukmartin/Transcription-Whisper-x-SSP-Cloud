@@ -88,4 +88,10 @@ Lorsque celle-ci est finie, plusieurs fichiers apparaissent dans la partie gauch
 
 #### 4. Recommencer le point 2. et 3. si vous avez plusieurs fichiers audio à retranscrire
 
-Vous pouvez alors répéter ces opérations pour transcrire d'autres fichiers audio. Une fois les retranscriptions terminées, il reste conseillé de supprimer le service.
+Vous pouvez alors répéter ces opérations pour transcrire d'autres fichiers audio.
+
+------------------------------------------------------------------------
+
+## Etape 3 : Supprimer le service
+
+**La suppression d'un service est automatique 24h après sa création**. Une fois les retranscriptions terminées et les fichiers .txt téléchargés, si vous penser ne plus avoir à transcrire d'entretiens dans les prochaines 24h, il est conseillé de supprimer le service. Cela met en sécurité vos enregistrements audio et leurs transcriptions qui sont alors supprimés du serveur, cela évite également d'encombrer votre espace personnel et les serveurs du SSP.
