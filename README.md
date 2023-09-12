@@ -32,13 +32,13 @@ Pour autant, avec la méthode de transcription proposée ici, l'enregistrement a
 
 Si vous n'en avez pas, vous devez [créer un compte](https://auth.lab.sspcloud.fr/auth/realms/sspcloud/login-actions/registration?client_id=onyxia&tab_id=VHXwOvcjkjQ).
 
-## Etape 1 : Lancer un service Python pré-configuré pour Whisper
+## Etape 1 : Ouvrir un service Python pré-configuré pour Whisper
 
 Dans l'environnement de travail du SSP Cloud, il est possible de lancer Python directement via l'onglet "Catalogue de services" en choisissant jupyter-python-gpu puis en réalisant "à la main" la configuration du service et enfin en installant Whisper et ses dépendances.
 
 Vous pouvez plus simplement suivre ces différentes étapes :
 
--   lancer python préconfiguré pour whisper en copiant et collant ce lien dans un navigateur :
+-   Lancer Python préconfiguré pour whisper en **copiant et collant** ce lien dans un navigateur :
 
     [https://datalab.sspcloud.fr/launcher/ide/jupyter-python-gpu?autoLaunch=true&onyxia.friendlyName=«Transcription%20Whisper%20»&resources.limits.nvidia\\.com/gpu=«4»&resources.limits.cpu=«40000m»&resources.limits.memory=«200Gi»&git.token=«»&git.name=«»&git.email=«»&init.personalInit=«https%3A%2F%2Fraw.githubusercontent.com%2Fanoukmartin%2FTranscription-Whisper-x-SSP-Cloud%2Fmain%2FInitPy.sh»](https://datalab.sspcloud.fr/launcher/ide/jupyter-python-gpu?autoLaunch=true&onyxia.friendlyName=«Transcription%20Whisper%20»&resources.limits.nvidia.com/gpu=«4»&resources.limits.cpu=«40000m»&resources.limits.memory=«200Gi»&git.token=«»&git.name=«»&git.email=«»&init.personalInit=«https%3A%2F%2Fraw.githubusercontent.com%2Fanoukmartin%2FTranscription-Whisper-x-SSP-Cloud%2Fmain%2FInitPy.sh»){.uri}
 
