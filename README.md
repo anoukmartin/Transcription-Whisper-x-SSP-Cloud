@@ -66,11 +66,11 @@ Dans l'onglet "Catalogue de services" choisir le service "Jupyter-python-gpu" et
 
     ![](images/datalab6.PNG)
 
--   Cliquer enfin sur "Lancer" pour sauvegarder dfinitivement cette configuration et lancer l'ouverture du service
+-   Cliquer enfin sur "Lancer" pour sauvegarder définitivement cette configuration et lancer l'ouverture du service
 
     ![](images/datalab7.PNG)
 
-    Cette préconfiguration apparaitra désomais dans votre espace "Mes services" comme service enregistré. Il ne sera plus nécéssaire de réaliser toutes les étapes précédentes à chaque fois, vous n'aurez plus qu'a cliquer sur "Lancer" pour lancer Python-Jupyter pré configuré pour la transcription avec Whisper.
+    ⟶ Cette préconfiguration apparaitra désomais dans votre espace "Mes services" comme service enregistré. Il ne sera plus nécéssaire de réaliser toutes les étapes précédentes à chaque fois, vous n'aurez plus qu'a cliquer sur "Lancer" pour lancer Python-Jupyter pré configuré pour la transcription avec Whisper.
 
 #### 4. Ouvrir le service
 
