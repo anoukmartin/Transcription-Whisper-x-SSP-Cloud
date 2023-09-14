@@ -20,7 +20,7 @@ L'utilisation du datalab du SSP Cloud est gratuite mais elle nécessite la créa
 
 ### Une très bonne protection des données (mais sans garantie !)
 
-Si Google Colab pose d'évidents problèmes de RGPD, l'utilisation du datalab n'est pas non plus exempt de limites en matière de protection des données. En particulier, bien que les technologies de protection utilisées soient de qualité, le SSP Cloud ne prèfère pas garantir la confidentialité des données stockées dans le coffre fort AWS (onglet "mes fichiers"). Vous prenez donc un risque (limité, mais existant) si vous chargez des enregistrements audio d'entretiens sociologiques sur celui-ci.
+Si Google Colab pose d'évidents problèmes de RGPD, l'utilisation du datalab n'est pas non plus exempt de limites en matière de protection des données. En particulier, bien que les technologies de protection utilisées soient de qualité, le SSP Cloud ne préfère pas garantir la confidentialité des données stockées dans le coffre fort AWS (onglet "mes fichiers"). Vous prenez donc un risque (limité, mais existant) si vous chargez des enregistrements audio d'entretiens sociologiques sur celui-ci.
 
 Pour autant, avec la méthode de transcription proposée ici, l'enregistrement audio et sa retranscription sous la forme de texte ne sont pas chargés dans le système de stockage du SSP Cloud mais seulement de manière confidentielle dans la mémoire temporaire d'un service dont la suppression est possible après chaque utilisation et est automatique après 24h, ils y sont donc en sécurité.
 
@@ -30,27 +30,57 @@ Pour autant, avec la méthode de transcription proposée ici, l'enregistrement a
 
 ## Préalable : Disposer d'un compte SSP Cloud
 
-Si vous n'en avez pas, vous devez [créer un compte](https://auth.lab.sspcloud.fr/auth/realms/sspcloud/login-actions/registration?client_id=onyxia&tab_id=VHXwOvcjkjQ).
+Si vous n'en avez pas, vous devez [créer un compte](https://auth.lab.sspcloud.fr/auth/realms/sspcloud/login-actions/registration?client_id=onyxia&tab_id=VHXwOvcjkjQ), puis vous connecter.
 
-## Etape 1 : Ouvrir un service Python pré-configuré pour Whisper
+## Etape 1 : Créer un service Python pour l'utilisation de Whisper
 
-Dans l'environnement de travail du SSP Cloud, il est possible de lancer Python directement via l'onglet "Catalogue de services" en choisissant jupyter-python-gpu puis en réalisant "à la main" la configuration du service et enfin en installant Whisper et ses dépendances.
+Une fois connecter au SSP Cloud l'environnement de travail s'ouvre.
 
-Vous pouvez plus simplement suivre ces différentes étapes :
+#### 1. Choisir un service dans le catalogue
 
--   Lancer Python préconfiguré pour whisper en **copiant et collant** ce lien dans un navigateur :
+Dans l'onglet "Catalogue de services" choisir le service "Jupyter-python-gpu" et cliquer sur "lancer".
 
-    [https://datalab.sspcloud.fr/launcher/ide/jupyter-python-gpu?autoLaunch=true&onyxia.friendlyName=«Transcription%20Whisper%20»&resources.limits.nvidia\\.com/gpu=«4»&resources.limits.cpu=«40000m»&resources.limits.memory=«200Gi»&git.token=«»&git.name=«»&git.email=«»&init.personalInit=«https%3A%2F%2Fraw.githubusercontent.com%2Fanoukmartin%2FTranscription-Whisper-x-SSP-Cloud%2Fmain%2FInitPy.sh»](https://datalab.sspcloud.fr/launcher/ide/jupyter-python-gpu?autoLaunch=true&onyxia.friendlyName=«Transcription%20Whisper%20»&resources.limits.nvidia.com/gpu=«4»&resources.limits.cpu=«40000m»&resources.limits.memory=«200Gi»&git.token=«»&git.name=«»&git.email=«»&init.personalInit=«https%3A%2F%2Fraw.githubusercontent.com%2Fanoukmartin%2FTranscription-Whisper-x-SSP-Cloud%2Fmain%2FInitPy.sh»){.uri}
+![](images/datalab1.PNG)
 
-    Dans ce cas, un nouveau service nommé ![](images/Capture3.PNG){width="158"} apparaît dans l'onglet ![](images/Capture2.PNG){width="120" height="30"} de votre compte SSP Cloud. Ce service est pré-configuré pour que l'utilisation de Whisper y soit facile[^readme-3].
+#### 2. Configurer le service
 
--   Une fois que ce service est prêt (cela peut prendre un peu de temps car le chargement de Whisper est long) pour l'ouvrir, cliquer sur le bouton ![](images/Capture5.PNG){width="67"}. Une boite de dialogue s'ouvre.
+-   Ouvrir le volet de configuration "Configuration Jupyter-python-gpu"
+
+    ![](images/datalab2.PNG)
+
+-   Dans l'onglet "Init", remplir le champ "PersonalInit" avec l'adresse suivante : <https://raw.githubusercontent.com/anoukmartin/Transcription-Whisper-x-SSP-Cloud/main/InitPy.sh>
+
+    ![](images/datalab3.PNG)
+
+-   Dans l'onglet "Ressources" régler tous les curseurs sur le maximum :
+
+    ![](images/datalab4.PNG)
+
+#### 3. Enregistrer cette configuration (pour ne plus avoir à la refaire)
+
+-   Donner un nom à ce service configuré pour Whisper dans le champ "Nom personnalisé". Par exemple "Transcription Whisper".
+
+    ![](images/datalab5.PNG)
+
+-   Sauvegarder cette configuration : cliquer sur le symbole "enregistrement"
+
+    ![](images/datalab6.PNG)
+
+-   Cliquer enfin sur "Lancer" pour sauvegarder définitivement cette configuration et lancer l'ouverture du service
+
+    ![](images/datalab7.PNG)
+
+    ⟶ Cette préconfiguration apparaitra désomais dans votre espace "Mes services" comme service enregistré. Il ne sera plus nécéssaire de réaliser toutes les étapes précédentes à chaque fois, vous n'aurez plus qu'a cliquer sur "Lancer" pour lancer Python-Jupyter pré configuré pour la transcription avec Whisper.
+
+#### 4. Ouvrir le service
+
+Une fois le chargement terminé le service (nommé ici "Transcription Whisper") apparaît dans l'onglet "Mes services" comme service en cours.
+
+-   Une fois que ce service est prêt pour l'ouvrir, cliquer sur le bouton ![](images/Capture5.PNG){width="67"}. Une boite de dialogue s'ouvre.
 
 -   Cliquer sur ![](images/Capture6.PNG){width="231"} puis sur ![](images/Capture7.PNG){width="242"}. Une page s'ouvre.
 
 -   Coller le mot de passe dans le champ destiné pour se connecter ![](images/Capture8.PNG){width="234"} .
-
-[^readme-3]: Ce service est pré-configuré de sorte à obtenir l'assistance d'un GPU et à disposer du maximum de ressources possible en CPU et mémoire vive en cas de besoin. L'installation de whisper et de ffmpeg se fait automatiquement lors du lancement du service. Un notebook Jupyter avec le code python nécessaire pour réaliser la transcription est également copié. Les informations précises sur ces réglages sont disponibles en cliquant sur ![](images/Capture4.PNG) une fois que le service est prêt.
 
 ## Etape 2 : Transcrire un fichier audio
 
@@ -68,7 +98,19 @@ Suivre ainsi les instructions indiquées sur le document.
 
 ### ⟹ *Un exemple avec ["AH LALA" de Meryl](https://www.youtube.com/watch?v=XfIefINb84U&ab_channel=FIYAHRECORDS).*
 
-#### *1. Charger le(s) fichier(s) audio à retranscrire*
+#### *1.* Installer Whisper
+
+Executer la ligne de code ci-dessous en cliquant sur le bouton ![](images/Capture15.PNG) ou avec ctrl + entrer:
+
+``` python
+!pip install -U openai-whisper
+```
+
+L'installation de Whisper commence :
+
+![](images/Capture10c.PNG)
+
+#### *2. Charger le(s) fichier(s) audio à retranscrire*
 
 *Charger le ou les fichier(s) audio à retranscrire en utilisant le bouton ![](images/Capture11.PNG){width="36"}. Le(s) fichier(s) doi(ven)t être au format .mp3 ou .wav. Si votre fichier est volumineux ou que vous souhaiter en charger plusieurs, il est préférable de disposer d'une bonne connexion à internet. Il(s) devrai(en)t apparaître dans la liste de la partie gauche de l'écran.*
 
