@@ -34,47 +34,27 @@ Pour autant, avec la méthode de transcription proposée ici, l'enregistrement a
 
 Si vous n'en avez pas, vous devez [créer un compte](https://auth.lab.sspcloud.fr/auth/realms/sspcloud/login-actions/registration?client_id=onyxia&tab_id=VHXwOvcjkjQ), puis vous connecter.
 
-## Etape 1 : Créer un service Python pour l'utilisation de Whisper
+## Etape 1 : Lancer un service Jupyter configuré pour l'utilisation de Whisper
 
-Une fois connecter au SSP Cloud l'environnement de travail s'ouvre.
+#### 1. Lancer un python préconfiguré pour Whisper
 
-#### 1. Choisir un service dans le catalogue
+Il est possible de configurer manuellement un service en se rendant dans son espace personnel puis, dans l'onglet "Catalogue de services"; en choisissant le service "Jupyter-python-gpu" et en cliquant sur "lancer". Dans le volet de configuration "Configuration Jupyter-python-gpu", il faut alors remplir l'onglet "Init" avec l'adresse suivante <https://raw.githubusercontent.com/anoukmartin/Transcription-Whisper-x-SSP-Cloud/main/InitPy.sh> dans le champ "PersonalInit". Puis dans l'onglet "Ressources" il faut régler les curseurs CPU et Memory sur le maximum, et laisser Nvidia.com/GPU sur le minimum (1)
 
-Dans l'onglet "Catalogue de services" choisir le service "Jupyter-python-gpu" et cliquer sur "lancer".
+Plus simplement, vous pouvez lancer un service pré-configuré en cliquant sur le bouton ci dessous :
 
-![](images/datalab1.PNG)
+<html>
 
-#### 2. Configurer le service
+<button onclick="window.location.href = &#39;https://datalab.sspcloud.fr/launcher/ide/jupyter-python-gpu?autoLaunch=true&init.personalInit=«https%3A%2F%2Fraw.githubusercontent.com%2Fanoukmartin%2FTranscription-Whisper-x-SSP-Cloud%2Fmain%2FInitPy.sh»&resources.limits.cpu=«40000m»&resources.limits.memory=«200Gi»&onyxia.friendlyName=«Transcription%20Whisper»/&#39;;">
 
--   Ouvrir le volet de configuration "Configuration Jupyter-python-gpu"
+**Lancer python préconfiguré pour Whisper**
 
-    ![](images/datalab2.PNG)
+</button>
 
--   Dans l'onglet "Init", remplir le champ "PersonalInit" avec l'adresse suivante : <https://raw.githubusercontent.com/anoukmartin/Transcription-Whisper-x-SSP-Cloud/main/InitPy.sh>
+</html>
 
-    ![](images/datalab3.PNG)
 
--   Dans l'onglet "Ressources" régler tous les curseurs sur le maximum :
 
-    ![](images/datalab4.PNG)
-
-#### 3. Enregistrer cette configuration (pour ne plus avoir à la refaire)
-
--   Donner un nom à ce service configuré pour Whisper dans le champ "Nom personnalisé". Par exemple "Transcription Whisper".
-
-    ![](images/datalab5.PNG)
-
--   Sauvegarder cette configuration : cliquer sur le symbole "enregistrement"
-
-    ![](images/datalab6.PNG)
-
--   Cliquer enfin sur "Lancer" pour sauvegarder définitivement cette configuration et lancer l'ouverture du service
-
-    ![](images/datalab7.PNG)
-
-    ⟶ Cette préconfiguration apparaitra désomais dans votre espace "Mes services" comme service enregistré. Il ne sera plus nécéssaire de réaliser toutes les étapes précédentes à chaque fois, vous n'aurez plus qu'a cliquer sur "Lancer" pour lancer Python-Jupyter pré configuré pour la transcription avec Whisper.
-
-#### 4. Ouvrir le service
+#### 2. Ouvrir le service
 
 Une fois le chargement terminé le service (nommé ici "Transcription Whisper") apparaît dans l'onglet "Mes services" comme service en cours.
 
