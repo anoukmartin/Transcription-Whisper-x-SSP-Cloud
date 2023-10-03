@@ -8,4 +8,3 @@ pip install -U openai-whisper
 
 # Copie du notebook de transcription
 wget https://raw.githubusercontent.com/anoukmartin/Transcription-Whisper-x-SSP-Cloud/main/Transcription_Whisper.ipynb
-
