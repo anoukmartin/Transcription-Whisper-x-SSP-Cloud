@@ -36,13 +36,13 @@ Si vous n'en avez pas, vous devez [créer un compte](https://auth.lab.sspcloud.f
 
 ## Etape 1 : Lancer un service Jupyter configuré pour l'utilisation de Whisper
 
-#### 1. Lancer un python pré configuré pour Whisper
+### 1. Lancer un python pré configuré pour Whisper
 
 Lancer un service pré-configuré en cliquant sur [ce lien](https://datalab.sspcloud.fr/launcher/ide/jupyter-python-gpu?autoLaunch=true&init.personalInit=«https%3A%2F%2Fraw.githubusercontent.com%2Fanoukmartin%2FTranscription-Whisper-x-SSP-Cloud%2Fmain%2FInitPy.sh»&resources.limits.cpu=«40000m»&resources.limits.memory=«200Gi»&onyxia.friendlyName=«Transcription%20Whisper»)[^tuto_transcription-4]
 
 [^tuto_transcription-4]: Il est possible de configurer manuellement un service en se rendant dans son espace personnel puis, dans l'onglet "Catalogue de services", en choisissant le service "Jupyter-python-gpu" et en cliquant sur "lancer". Dans le volet de configuration "Configuration Jupyter-python-gpu", il faut alors remplir l'onglet "Init" avec l'adresse suivante <https://raw.githubusercontent.com/anoukmartin/Transcription-Whisper-x-SSP-Cloud/main/InitPy.sh> dans le champ "PersonalInit". Puis dans l'onglet "Ressources" il faut régler les curseurs CPU et Memory sur le maximum, et laisser Nvidia.com/GPU sur le minimum (1)
 
-#### 2. Ouvrir le service
+### 2. Ouvrir le service
 
 Une fois le chargement terminé un service nommé "Transcription Whisper" apparaît dans l'onglet "Mes services".
 
@@ -58,11 +58,7 @@ Une fois le service lancé, l'interface Jupyter s'ouvre :
 
 ![](images/Capture10.PNG)
 
-Dans la partie gauche de l'écran, ouvrir le fichier intitulé `Transcription_whisper.ipynb`. Un notebook s'ouvre alors :
-
-![](images/Capture10b.PNG)
-
-Suivre ainsi les instructions indiquées sur le document.
+Dans la partie gauche de l'écran, ouvrir le fichier intitulé `Transcription_whisper.ipynb`. Un notebook s'ouvre alors. Suivre ainsi les instructions indiquées sur le document.
 
 ## Etape 3 : Supprimer le service
 
