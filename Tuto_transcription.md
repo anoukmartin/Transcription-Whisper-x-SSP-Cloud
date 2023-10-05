@@ -32,13 +32,13 @@ Pour autant, avec la méthode de transcription proposée ici, l'enregistrement a
 
 ## Préalable : Disposer d'un compte SSP Cloud
 
-Si vous n'en avez pas, vous devez [⬈créer un compte](https://auth.lab.sspcloud.fr/auth/realms/sspcloud/login-actions/registration?client_id=onyxia&tab_id=VHXwOvcjkjQ){target="_blank"}, puis vous connecter.
+Si vous n'en avez pas, vous devez [⬈créer un compte](https://auth.lab.sspcloud.fr/auth/realms/sspcloud/login-actions/registration?client_id=onyxia&tab_id=VHXwOvcjkjQ), puis vous connecter.
 
 ## Etape 1 : Lancer un service Jupyter configuré pour l'utilisation de Whisper
 
 ### 1. Lancer un python pré configuré pour Whisper
 
-Lancer un service pré-configuré en cliquant sur [⬈ici](https://datalab.sspcloud.fr/launcher/ide/jupyter-python-gpu?autoLaunch=true&init.personalInit=«https%3A%2F%2Fraw.githubusercontent.com%2Fanoukmartin%2FTranscription-Whisper-x-SSP-Cloud%2Fmain%2FInitPy.sh»&resources.limits.cpu=«40000m»&resources.limits.memory=«200Gi»&onyxia.friendlyName=«Transcription%20Whisper»){target="_blank"}[^tuto_transcription-4]
+Lancer un service pré-configuré en cliquant sur [⬈ici](https://datalab.sspcloud.fr/launcher/ide/jupyter-python-gpu?autoLaunch=true&init.personalInit=«https%3A%2F%2Fraw.githubusercontent.com%2Fanoukmartin%2FTranscription-Whisper-x-SSP-Cloud%2Fmain%2FInitPy.sh»&resources.limits.cpu=«40000m»&resources.limits.memory=«200Gi»&onyxia.friendlyName=«Transcription%20Whisper»)[^tuto_transcription-4]
 
 [^tuto_transcription-4]: Il est possible de configurer manuellement un service en se rendant dans son espace personnel puis, dans l'onglet "Catalogue de services", en choisissant le service "Jupyter-python-gpu" et en cliquant sur "lancer". Dans le volet de configuration "Configuration Jupyter-python-gpu", il faut alors remplir l'onglet "Init" avec l'adresse suivante <https://raw.githubusercontent.com/anoukmartin/Transcription-Whisper-x-SSP-Cloud/main/InitPy.sh> dans le champ "PersonalInit". Puis dans l'onglet "Ressources" il faut régler les curseurs CPU et Memory sur le maximum, et laisser Nvidia.com/GPU sur le minimum (1)
 

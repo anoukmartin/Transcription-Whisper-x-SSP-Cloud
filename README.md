@@ -4,4 +4,4 @@ Répertoire contenant les différents fichiers nécessaires à la configuration 
 
 ### Lire ce tutoriel pour utiliser le service
 
-### [Accéder directement au service](https://datalab.sspcloud.fr/launcher/ide/jupyter-python-gpu?autoLaunch=true&onyxia.friendlyName=«Transcription%20Whisper»&s3.enabled=false&kubernetes.enabled=false&resources.limits.cpu=«40000m»&resources.limits.memory=«200Gi»&git.enabled=false&vault.enabled=false&init.personalInit=«https%3A%2F%2Fraw.githubusercontent.com%2Fanoukmartin%2FTranscription-Whisper-x-SSP-Cloud%2Fmain%2FInitPy.sh»){parent="_blank"} 
+### [Accéder directement au service](https://datalab.sspcloud.fr/launcher/ide/jupyter-python-gpu?autoLaunch=true&onyxia.friendlyName=«Transcription%20Whisper»&s3.enabled=false&kubernetes.enabled=false&resources.limits.cpu=«40000m»&resources.limits.memory=«200Gi»&git.enabled=false&vault.enabled=false&init.personalInit=«https%3A%2F%2Fraw.githubusercontent.com%2Fanoukmartin%2FTranscription-Whisper-x-SSP-Cloud%2Fmain%2FInitPy.sh») 
