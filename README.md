@@ -6,7 +6,7 @@ Répertoire contenant les différents fichiers nécessaires à la configuration 
 
 Un tutoriel rapide expliquant comment transcrire un entretien avec Whsiper sur un service SSP Cloud
 
-🔗 **Lire le tutoriel**
+🔗 [**Lire le tutoriel**](https://github.com/anoukmartin/Transcription-Whisper-x-SSP-Cloud/blob/main/Tuto_transcription.md)
 
 ## Accéder directement au service préconfiguré
 
