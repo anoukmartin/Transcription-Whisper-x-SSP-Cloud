@@ -18,18 +18,18 @@ Ce lien permet de lancer un service avec toutes les configurations nécessaires 
 
 Plutôt que d'utiliser le lien ci-dessus vous pouvez configurer manuellement un service et enregistrer celui-ci dans votre environnement SSP Cloud
 
-### Choix du service
+### 1. Choix du service
 
 Dans son espace personnel se rendre dans l'onglet "Catalogue de services", en choisir le service "Jupyter-python-gpu" en cliquant sur "lancer".
 
-### Paramètres de ressources
+### 2. Paramètres de ressources
 
 La transcription d'audio est une opération lourde, elle nécessite un GPU pour avoir des performances optimales, mais aussi un processeur puissant et suffisamment de mémoire vive si l\'enregistrement audio à retranscrire est long. Dans le volet de configuration "Configuration Jupyter-python-gpu", renseigner l'onglet "Ressources" en réglant les curseurs CPU et Memory sur le maximum, et laisser Nvidia.com/GPU sur le minimum (1)
 
-### Script d'initialisation
+### 3. Script d'initialisation
 
 Dans la pré configuration proposée ici, on installe Whisper et ses dépendances de manière automatique, et on copie le [Notebook jupyter](https://github.com/anoukmartin/Transcription-Whisper-x-SSP-Cloud/blob/main/Transcription_Whisper.ipynb) contenant le code et les instructions nécessaires à la transcription dans l'environnement Jupyter. Pour cela remplir l'onglet "Init" avec l'adresse suivante <https://raw.githubusercontent.com/anoukmartin/Transcription-Whisper-x-SSP-Cloud/main/InitPy.sh> dans le champ "PersonalInit".
 
-### Enregistrer la configuration
+### 4. Enregistrer la configuration
 
 Pour ne pas avoir à refaire celle-ci, vous pouvez enregistrer cette configuration de service. Donner un nom à ce service configuré pour Whisper dans le champ "Nom personnalisé" (par exemple "Transcription Whisper"). Cliquer sur le symbole "enregistrement", puis sur "Lancer" pour sauvegarder définitivement cette configuration et lancer l'ouverture du service. Cette préconfiguration apparaîtra désormais dans votre espace "Mes services" comme service enregistré. Il ne sera plus nécessaire de réaliser toutes les étapes précédentes à chaque fois, vous n'aurez plus qu'a cliquer sur "Lancer" pour lancer Python-Jupyter pré configuré pour la transcription avec Whisper.
